@@ -839,7 +839,7 @@
 						
 					\end{circuitikz}
 				\end{center}
-				\begin{equation}\label{key}
+				\begin{equation}\label{key} \tag{5}
 				\left\{ \begin{array}{l}
 				j\omega{L_1}{I_1} - j\omega M{I_2} = {V_1}\\
 				{Z_2}{I_2} + j\omega{L_2}{I_2} - j\omega M{I_1} = 0
@@ -877,12 +877,12 @@
 					\begin{circuitikz}
 						% Trafo
 						\draw (0,0) node[transformer] (T) {};
-						\draw (T.base) node{$M$};
+						\draw (T.base) node{\footnotesize $1:N$};
 						% Point
 						\node[mark size=1.5pt] at (-0.6, -0.3) {\pgfuseplotmark{*}};
-						\node[mark size=1.5pt] at (0.6, -1.8) {\pgfuseplotmark{*}};
+						\node[mark size=1.5pt] at (0.6, -0.3) {\pgfuseplotmark{*}};
 						% Arrow
-						\draw [latex-latex] (-0.35,-0.3) to [out=30,in=150] (0.35,-0.3);
+%						\draw [latex-latex] (-0.35,-0.3) to [out=30,in=150] (0.35,-0.3);
 						% Primary
 						\draw (-1.5,0) -- (-1,0);
 						\draw (-1.5,-2.1) -- (-1,-2.1);
@@ -900,15 +900,62 @@
 						% Current i2
 						\draw [-latex] (1.25,0.25) --++ (-0.75,0) node[midway, above] {$i_2$};
 						% L1
-						\draw node[] at (-0.75,-1) {$L_1$};
+%						\draw node[] at (-0.75,-1) {$L_1$};
 						% L2
-						\draw node[] at (0.75,-1) {$L_2$};
+%						\draw node[] at (0.75,-1) {$L_2$};
 					\end{circuitikz}
 				\end{center}
+				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{6}
+				\left\{ \begin{array}{l}
+				\frac{{{v_2}}}{{{v_1}}} = \frac{{{N_2}}}{{{N_1}}} = N\\
+				\frac{{{i_2}}}{{{i_1}}} = \frac{{{N_1}}}{{{N_2}}} = \frac{1}{N}\\
+				\frac{{{Z_2}}}{{{Z_1}}} = {\left( {\frac{{{N_2}}}{{{N_1}}}} \right)^2} = {N^2}
+				\end{array} \right.
+				\end{equation}
 			\end{minipage}
 			\hfill
 			\begin{minipage}[b]{0.45\textwidth}
-				Figura 9.38.
+				\begin{center}
+					\begin{circuitikz}
+						% Trafo
+						\draw (0,0) node[transformer] (T) {};
+						\draw (T.base) node{\footnotesize $1:N$};
+						% Point
+						\node[mark size=1.5pt] at (-0.6, -0.3) {\pgfuseplotmark{*}};
+						\node[mark size=1.5pt] at (0.6, -1.8) {\pgfuseplotmark{*}};
+						% Arrow
+						%						\draw [latex-latex] (-0.35,-0.3) to [out=30,in=150] (0.35,-0.3);
+						% Primary
+						\draw (-1.5,0) -- (-1,0);
+						\draw (-1.5,-2.1) -- (-1,-2.1);
+						\draw node[circ] (A) at (-1.5,0) {};
+						\draw node[circ] (B) at (-1.5,-2.1) {};
+						\draw (A) to[open, v=$v_1$] (B);
+						% Secondary
+						\draw (1.5,0) -- (1,0);
+						\draw (1.5,-2.1) -- (1,-2.1);
+						\draw node[circ] (C) at (1.5,0) {};
+						\draw node[circ] (D) at (1.5,-2.1) {};
+						\draw (C) to[open, v^=$v_2$] (D);
+						% Current i1
+						\draw [-latex] (-1.25,0.25) --++ (0.75,0) node[midway, above] {$i_1$};
+						% Current i2
+						\draw [-latex] (1.25,0.25) --++ (-0.75,0) node[midway, above] {$i_2$};
+						% L1
+						%						\draw node[] at (-0.75,-1) {$L_1$};
+						% L2
+						%						\draw node[] at (0.75,-1) {$L_2$};
+					\end{circuitikz}
+				\end{center}
+				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{6}
+				\left\{ \begin{array}{l}
+				\frac{{{v_2}}}{{{v_1}}} = -\frac{{{N_2}}}{{{N_1}}} = -N\\
+				\frac{{{i_2}}}{{{i_1}}} = -\frac{{{N_1}}}{{{N_2}}} = -\frac{1}{N}\\
+				\frac{{{Z_2}}}{{{Z_1}}} = {\left( {\frac{{{N_2}}}{{{N_1}}}} \right)^2} = {N^2}
+				\end{array} \right.
+				\end{equation}
 			\end{minipage}
 		}
 	\end{overprint}
@@ -921,9 +968,70 @@
 \tableofcontents[currentsection]
 \end{frame}
 %------------------------------------------------
+\begin{frame}
+\frametitle{Autotransformador}
+	\begin{block}{Autotransformador}
+		\begin{itemize}
+			\item Possui um único enrolamento com um ponto de conexão, denominado \textbf{\textit{tap}}, entre o primário e secundário.
+			\item O \textit{tap} é ajustável $\Rightarrow$ fornece a relação de espiras desejadas para aumentar ou diminuir a tensão.
+ 		\end{itemize}
+	\end{block}
+	\begin{center}
+		\begin{circuitikz}
+			% Lower coil
+			\draw (0,1.15) to[L] (0,0);
+			% Upper coil
+			\draw (0,2.30) to[L] (0,1.15);
+			% Upper line
+			\draw (0,2.30) --++ (0,0.5) --++ (-1,0);
+			% Lower line
+			\draw (0,0) --++ (0,-0.5) --++ (-1,0);
+			% Tap
+			\draw (0,1.15) --++ (1,0);
+		\end{circuitikz}
+	\end{center}
+\end{frame}
 
+\begin{frame}
+\frametitle{Autotransformador}
+	\vspace{-0.2cm}
+	\begin{block}{Vantagens do autotransformador sobre o transformador}
+		\small
+		\begin{itemize}
+			\item Capaz de transferir uma quantidade maior de potência $\Rightarrow$ menor perda.
+			\item Mais leve e possui um tamanho menor.
+		\end{itemize}
+	\end{block}
+	\vspace{-0.1cm}
+	\begin{block}{Desvantagem do autotransformador sobre o transformador}
+		\small
+		\begin{itemize}
+			\item Perda da isolação elétrica.
+		\end{itemize}
+	\end{block}
+	\vspace{-0.1cm}
+	\begin{block}{Aplicações}
+		\small
+		\begin{itemize}
+			\item Utilizado para aliviar a corrente de partida de motores.
+			\item Usados em sistema de distribuição para interconectar duas redes com tensões distintas.
+			\item Em zonas rurais, autotransformadores com mudança automática de \textit{tap} são usados como reguladores de tensão para garantir a tensão correta no fim da linha.
+			\item Em aplicação de áudio.
+		\end{itemize}		
+	\end{block}
+\end{frame}
 
-
+\begin{frame}
+\frametitle{Autotransformador}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.7\linewidth]{figuras/autotrafo}
+		\caption{Autotransformador.}
+		\label{fig:autotrafo}
+	\end{figure}
+	
+\end{frame}
 %------------------------------------------------
 \section{Exemplos}
 \begin{frame}

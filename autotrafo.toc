@@ -5,4 +5,4 @@
 \beamer@subsectionintoc {1}{3}{Transformador Real}{11}{0}{1}
 \beamer@subsectionintoc {1}{4}{Transformador Ideal}{13}{0}{1}
 \beamer@sectionintoc {2}{Autotransformador}{15}{0}{2}
-\beamer@sectionintoc {3}{Exemplos}{16}{0}{3}
+\beamer@sectionintoc {3}{Exemplos}{19}{0}{3}
