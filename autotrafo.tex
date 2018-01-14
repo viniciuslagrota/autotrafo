@@ -949,7 +949,7 @@
 					\end{circuitikz}
 				\end{center}
 				\vspace{-0.3cm}
-				\begin{equation}\label{key} \tag{6}
+				\begin{equation}\label{key} \tag{7}
 				\left\{ \begin{array}{l}
 				\frac{{{v_2}}}{{{v_1}}} = -\frac{{{N_2}}}{{{N_1}}} = -N\\
 				\frac{{{i_2}}}{{{i_1}}} = -\frac{{{N_1}}}{{{N_2}}} = -\frac{1}{N}\\
@@ -983,11 +983,21 @@
 			% Upper coil
 			\draw (0,2.30) to[L] (0,1.15);
 			% Upper line
-			\draw (0,2.30) --++ (0,0.5) --++ (-1,0);
+			\draw [thick] (0,2.30) --++ (0,0.5) --++ (-1,0);
 			% Lower line
-			\draw (0,0) --++ (0,-0.5) --++ (-1,0);
+			\draw [thick] (0,0) --++ (0,-0.5) --++ (-1,0);
 			% Tap
-			\draw (0,1.15) --++ (1,0);
+			\draw [thick] (0,1.15) --++ (1,0);
+			% L1
+			\draw node[] at (0.5, 1.725) {$L_1$};
+			% L2
+			\draw node[] at (0.5, 0.575) {$L_2$};
+			% Dot
+			\draw node[circ] at (0.35, 2.3) {};
+			\draw node[circ] at (0.35, 1) {};
+			% Arrow
+			\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+			\draw node[] at (-0.6, 1.65) {$M$};
 		\end{circuitikz}
 	\end{center}
 \end{frame}
@@ -1022,15 +1032,692 @@
 \end{frame}
 
 \begin{frame}
-\frametitle{Autotransformador}
-	
+\frametitle{Autotransformador}	
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.7\linewidth]{figuras/autotrafo}
-		\caption{Autotransformador.}
+		\caption{Autotransformador trifásico.}
 		\label{fig:autotrafo}
-	\end{figure}
-	
+	\end{figure}	
+\end{frame}
+
+\begin{frame}
+\frametitle{Autotransformador}
+\framesubtitle{Análise}
+	\begin{overprint}
+		\only<1>
+		{
+			\begin{block}{Objetivos}
+				\begin{itemize}
+					\item Escrever a equação diferencial relacionando a corrente de saída $i_2$ com a tensão de entrada $v_1$.
+					\item Calcular as relações de tensão e corrente em estado permanente.
+					\item Observação: as bobinas $L_1$ e $L_2$ possuem $N_1$ e $N_2$ espiras, respectivamente.
+				\end{itemize}
+			\end{block}
+			\begin{center}
+				\begin{circuitikz}
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+		}
+		\only<2>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Equação diferencial}
+				\begin{equation}\label{key} \tag{8}
+				\left\{ \begin{array}{l}
+				{L_1}\frac{{d{i_1}}}{{dt}} + M\left( {\frac{{d{i_1}}}{{dt}} - \frac{{d{i_2}}}{{dt}}} \right) + {L_2}\left( {\frac{{d{i_1}}}{{dt}} - \frac{{d{i_2}}}{{dt}}} \right) + M\frac{{d{i_1}}}{{dt}} = {v_1}\\[5pt]
+				R{i_2} + {L_2}\left( {\frac{{d{i_2}}}{{dt}} - \frac{{d{i_1}}}{{dt}}} \right) - M\frac{{d{i_1}}}{{dt}} = 0
+				\end{array} \right.
+				\end{equation}
+				Rearranjando,
+				\vspace{-0.4cm}
+				\begin{equation}\label{key} \tag{9}
+				\left\{ \begin{array}{l}
+				\left( {{L_1} + {L_2} + 2M} \right)\frac{{d{i_1}}}{{dt}} - \left( {{L_2} + M} \right)\frac{{d{i_2}}}{{dt}} = {v_1}\\[5pt]
+				- \left( {{L_2} + M} \right)\frac{{d{i_1}}}{{dt}} + {L_2}\frac{{d{i_2}}}{{dt}} + R{i_2} = 0
+				\end{array} \right.
+				\end{equation}
+			\end{block}
+		}
+		\only<3>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Equação diferencial}
+				\begin{equation} \label{key} \tag{9}
+				\left\{ \begin{array}{l}
+				\left( {{L_1} + {L_2} + 2M} \right)\frac{{d{i_1}}}{{dt}} - \left( {{L_2} + M} \right)\frac{{d{i_2}}}{{dt}} = {v_1}\\[5pt]
+				- \left( {{L_2} + M} \right)\frac{{d{i_1}}}{{dt}} + {L_2}\frac{{d{i_2}}}{{dt}} + R{i_2} = 0
+				\end{array} \right.
+				\end{equation}
+				Isolando $\frac{di_1}{dt}$ na segunda equação em (9):
+				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{10}
+				\left\{ \begin{array}{l}
+				\left( {{L_1} + {L_2} + 2M} \right)\frac{{d{i_1}}}{{dt}} - \left( {{L_2} + M} \right)\frac{{d{i_2}}}{{dt}} = {v_1}\\[5pt]
+				\frac{{d{i_1}}}{{dt}} = \frac{{{L_2}\frac{{d{i_2}}}{{dt}} + R{i_2}}}{{\left( {{L_2} + M} \right)}}
+				\end{array} \right.
+				\end{equation}
+			\end{block}
+		}
+		\only<4>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Equação diferencial}
+				\begin{equation}\label{key} \tag{10}
+				\left\{ \begin{array}{l}
+				\left( {{L_1} + {L_2} + 2M} \right)\frac{{d{i_1}}}{{dt}} - \left( {{L_2} + M} \right)\frac{{d{i_2}}}{{dt}} = {v_1}\\[5pt]
+				\frac{{d{i_1}}}{{dt}} = \frac{{{L_2}\frac{{d{i_2}}}{{dt}} + R{i_2}}}{{\left( {{L_2} + M} \right)}}
+				\end{array} \right.
+				\end{equation}
+				Substituindo a segunda equação de (10) na primeira:
+				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{11}
+				\left( {\frac{{{L_1} + {L_2} + 2M}}{{{L_2} + M}}} \right)\left( {{L_2}\frac{{d{i_2}}}{{dt}} + R{i_2}} \right) - \left( {{L_2} + M} \right)\frac{{d{i_2}}}{{dt}} = {v_1}
+				\end{equation}
+			\end{block}
+		}
+		\only<5>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Equação diferencial}
+				\begin{equation}\label{key} \tag{11}
+				\left( {\frac{{{L_1} + {L_2} + 2M}}{{{L_2} + M}}} \right)\left( {{L_2}\frac{{d{i_2}}}{{dt}} + R{i_2}} \right) - \left( {{L_2} + M} \right)\frac{{d{i_2}}}{{dt}} = {v_1}
+				\end{equation}
+				Rearranjando,
+				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{12}
+				\left( {{L_1}{L_2} - {M^2}} \right)\frac{{d{i_2}}}{{dt}} + R\left( {{L_1} + {L_2} + 2M} \right){i_2} = \left( {{L_2} + M} \right){v_1}
+				\end{equation}
+			\end{block}
+		}
+		\only<6>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Equação diferencial}
+				\begin{equation}\label{key} \tag{12}
+				\left( {{L_1}{L_2} - {M^2}} \right)\frac{{d{i_2}}}{{dt}} + R\left( {{L_1} + {L_2} + 2M} \right){i_2} = \left( {{L_2} + M} \right){v_1}
+				\end{equation}
+				Considerando o coeficiente de acoplamento unitário ($k=1$ em $M=k\sqrt {{L_1}{L_2}}$), a primeira parcela é anulada.
+				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{13}
+				\textcolor{red}{\left( {{L_1}{L_2} - {M^2}} \right)\frac{{d{i_2}}}{{dt}}} + R\left( {{L_1} + {L_2} + 2M} \right){i_2} = \left( {{L_2} + M} \right){v_1}
+				\end{equation}
+			\end{block}
+		}
+		\only<7>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Equação diferencial}
+				\begin{equation}\label{key} \tag{12}
+				\left( {{L_1}{L_2} - {M^2}} \right)\frac{{d{i_2}}}{{dt}} + R\left( {{L_1} + {L_2} + 2M} \right){i_2} = \left( {{L_2} + M} \right){v_1}
+				\end{equation}
+				Considerando o coeficiente de acoplamento unitário ($k=1$ em $M=k\sqrt {{L_1}{L_2}}$), a primeira parcela é anulada.
+				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{13}
+				R\left( {{L_1} + {L_2} + 2M} \right){i_2} = \left( {{L_2} + M} \right){v_1}
+				\end{equation}
+			\end{block}
+		}
+		\only<8>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Equação diferencial}
+				\begin{equation}\label{key} \tag{13}
+				R\left( {{L_1} + {L_2} + 2M} \right){i_2} = \left( {{L_2} + M} \right){v_1}
+				\end{equation}
+				Portanto,
+				\begin{equation}\label{key} \tag{14}
+				{i_2} = \frac{{\left( {{L_2} + M} \right)}}{{R\left( {{L_1} + {L_2} + 2M} \right)}}{v_1}
+				\end{equation}
+			\end{block}
+		}
+		\only<9>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Em estado permanente senoidal}
+				\begin{equation}\label{key} \tag{12}
+				\left( {{L_1}{L_2} - {M^2}} \right)\frac{{d{i_2}}}{{dt}} + R\left( {{L_1} + {L_2} + 2M} \right){i_2} = \left( {{L_2} + M} \right){v_1}
+				\end{equation}
+				Em estado permanente senoidal,
+%				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{15}
+				j\omega \left( {{L_1}{L_2} - {M^2}} \right){I_2} + R\left( {{L_1} + {L_2} + 2M} \right){I_2} = \left( {{L_2} + M} \right){V_1}
+				\end{equation}
+			\end{block}
+		}
+		\only<10>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Em estado permanente senoidal}
+				\begin{equation}\label{key} \tag{15}
+				j\omega \left( {{L_1}{L_2} - {M^2}} \right){I_2} + R\left( {{L_1} + {L_2} + 2M} \right){I_2} = \left( {{L_2} + M} \right){V_1}
+				\end{equation}
+				Rearranjando,
+				%				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{16}
+				\frac{{{I_2}}}{{{V_1}}} = \frac{{{L_2} + M}}{{j\omega \left( {{L_1}{L_2} - {M^2}} \right) + R\left( {{L_1} + {L_2} + 2M} \right)}}
+				\end{equation}
+			\end{block}
+		}
+		\only<11>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Em estado permanente senoidal}
+				\begin{equation}\label{key} \tag{9}
+				\left\{ \begin{array}{l}
+				\left( {{L_1} + {L_2} + 2M} \right)\frac{{d{i_1}}}{{dt}} - \left( {{L_2} + M} \right)\frac{{d{i_2}}}{{dt}} = {v_1}\\[5pt]
+				- \left( {{L_2} + M} \right)\frac{{d{i_1}}}{{dt}} + {L_2}\frac{{d{i_2}}}{{dt}} + R{i_2} = 0
+				\end{array} \right.
+				\end{equation}
+				Da segunda equação de (9):
+				%				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{17}
+				- j\omega \left( {{L_2} + M} \right){I_1} + j\omega {L_2}{I_2} + R{I_2} = 0 \Rightarrow \frac{{{I_2}}}{{{I_1}}} = \frac{{j\omega \left( {{L_2} + M} \right)}}{{j\omega {L_2} + R}}
+				\end{equation}
+			\end{block}
+		}
+		\only<12>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Em estado permanente senoidal}
+				\begin{equation}\label{key} \tag{17}
+				- j\omega \left( {{L_2} + M} \right){I_1} + j\omega {L_2}{I_2} + R{I_2} = 0 \Rightarrow \frac{{{I_2}}}{{{I_1}}} = \frac{{j\omega \left( {{L_2} + M} \right)}}{{j\omega {L_2} + R}}
+				\end{equation}
+				Geralmente, $j\omega L_2 \gg R$. Para um autotransformador ideal ($k = 1$):
+				%				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{18}
+				\frac{{{I_2}}}{{{I_1}}} = \frac{{j\omega \left( {{L_2} + M} \right)}}{{j\omega {L_2}}} = 1 + \frac{M}{{{L_2}}} = 1 + \frac{{k\sqrt {{L_1}{L_2}} }}{{{L_2}}} = 1 + \sqrt {\frac{{{L_1}}}{{{L_2}}}}  = 1 + \frac{{{N_1}}}{{{N_2}}}
+				\end{equation}
+			\end{block}
+		}
+		\only<13>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Em estado permanente senoidal}
+				\begin{equation}\label{key} \tag{17}
+				- j\omega \left( {{L_2} + M} \right){I_1} + j\omega {L_2}{I_2} + R{I_2} = 0 \Rightarrow \frac{{{I_2}}}{{{I_1}}} = \frac{{j\omega \left( {{L_2} + M} \right)}}{{j\omega {L_2} + R}}
+				\end{equation}
+				Geralmente, $j\omega L_2 \gg R$. Para um autotransformador ideal ($k = 1$):
+				%				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{18}
+				\frac{{{I_2}}}{{{I_1}}} = 1 + \frac{{{N_1}}}{{{N_2}}} = \frac{{{N_1} + {N_2}}}{{{N_2}}}
+				\end{equation}
+			\end{block}
+		}
+		\only<14>
+		{			
+			\vspace{-0.1cm}
+			\begin{center}
+				\begin{circuitikz}[scale=0.8, every node/.style={scale=0.8}]
+					% Lower coil
+					\draw (0,1.15) to[L] (0,0);
+					% Upper coil
+					\draw (0,2.30) to[L] (0,1.15);									
+					% L1
+					\draw node[] at (0.5, 1.725) {$L_1$};
+					% L2
+					\draw node[] at (0.5, 0.575) {$L_2$};
+					% Dot
+					\draw node[circ] at (0.35, 2.3) {};
+					\draw node[circ] at (0.35, 1) {};
+					% Arrow
+					\draw [latex-latex] (-0.1,2.3) to [out=240,in=120] (-0.1,1);
+					\draw node[] at (-0.6, 1.65) {$M$};
+					% Left side
+					\draw [thick] (0,2.30) --++ (0,0.5) --++ (-2,0);
+					\draw [thick] (0,0) --++ (0,-0.5) --++ (-2,0);	
+					\draw (-2,2.8) to[open, v_=$v_1$, *-*] (-2,-0.5);
+					% Tap + Right side 
+					\draw [thick] (0,1.15) --++ (2.5,0);
+					\draw (2.5, 1.15) to[R, l_=$R$, v^=$v_2$] (2.5,-0.5);
+					\draw [thick] (0,-0.5) -- (2.5,-0.5);
+					% Current i1
+					\draw[latex-] (-1,1.15) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (-1, 0.95) node{$i_1$};
+					% Current i2
+					\draw[latex-] (1.6, 0.4) arc[radius=0.3cm,start angle=0,delta angle=270];
+					\draw  (1.6, 0.2) node{$i_2$};
+				\end{circuitikz}
+			\end{center}
+			\vspace{-0.2cm}
+			\begin{block}{Em estado permanente senoidal}
+				\begin{equation}\label{key} \tag{16}
+				\frac{{{I_2}}}{{{V_1}}} = \frac{{{L_2} + M}}{{j\omega \left( {{L_1}{L_2} - {M^2}} \right) + R\left( {{L_1} + {L_2} + 2M} \right)}}
+				\end{equation}
+				A relação entre as tensões é dada por:
+				%				\vspace{-0.3cm}
+				\begin{equation}\label{key} \tag{19}
+				\frac{{{V_2}}}{{{V_1}}} = \frac{{R{I_2}}}{{{V_1}}} = \frac{{R\left( {{L_2} + M} \right)}}{{j\omega \left( {{L_1}{L_2} - {M^2}} \right) + R\left( {{L_1} + {L_2} + 2M} \right)}}
+				\end{equation}
+			\end{block}
+		
+		%% Eq. 9.42 agora!!
+		}
+	\end{overprint}
 \end{frame}
 %------------------------------------------------
 \section{Exemplos}
@@ -1040,6 +1727,8 @@
 \tableofcontents[currentsection]
 \end{frame}
 %------------------------------------------------
+
+
 
 \begin{frame}
 \frametitle{References}

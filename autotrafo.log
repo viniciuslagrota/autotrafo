@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.11)  14 JAN 2018 10:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.11)  14 JAN 2018 13:38
 entering extended mode
 **./autotrafo.tex
 (autotrafo.tex
@@ -1997,28 +1997,84 @@ Overfull \vbox (1.8324pt too high) detected at line 962
 ] [16
 
 ]
-Overfull \vbox (2.43689pt too high) detected at line 1022
+Overfull \vbox (2.43689pt too high) detected at line 1032
  []
 
 [17
 
 ]
-<figuras/autotrafo.png, id=567, 352.9185pt x 294.50024pt>
+<figuras/autotrafo.png, id=568, 352.9185pt x 294.50024pt>
 File: figuras/autotrafo.png Graphic file (type png)
 <use figuras/autotrafo.png>
-Package pdftex.def Info: figuras/autotrafo.png  used on input line 1034. on inp
-ut line 1034.
+Package pdftex.def Info: figuras/autotrafo.png  used on input line 1042. on inp
+ut line 1042.
 Package pdftex.def Info: Requested size: 239.60567pt x 199.94743pt on input lin
-e 1034.
+e 1042.
 
-Overfull \vbox (9.1835pt too high) detected at line 1034
+Overfull \vbox (9.1835pt too high) detected at line 1042
  []
 
 [18
 
- <./figuras/autotrafo.png>] (autotrafo.toc) [19
+ <./figuras/autotrafo.png>]
+Overfull \vbox (7.94691pt too high) detected at line 1719
+ []
 
-] [20
+[19
+
+]
+Overfull \vbox (5.3794pt too high) detected at line 1719
+ []
+
+[20
+
+]
+Overfull \vbox (10.65796pt too high) detected at line 1719
+ []
+
+[21
+
+]
+Overfull \vbox (0.72868pt too high) detected at line 1719
+ []
+
+[22
+
+] [23
+
+] [24
+
+] [25
+
+] [26
+
+] [27
+
+] [28
+
+]
+Overfull \vbox (1.42805pt too high) detected at line 1719
+ []
+
+[29
+
+]
+Overfull \vbox (10.75978pt too high) detected at line 1719
+ []
+
+[30
+
+]
+Overfull \vbox (7.6896pt too high) detected at line 1719
+ []
+
+[31
+
+] [32
+
+] (autotrafo.toc) [33
+
+] [34
 
  <C:/Program Files/MiKTeX 2.9/tex/latex/beamer/art/beamericonarticle.pdf>]
 \tf@nav=\write8
@@ -2030,11 +2086,11 @@ Overfull \vbox (9.1835pt too high) detected at line 1034
 \tf@snm=\write10
 \openout10 = `autotrafo.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1059.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1059.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1746.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1746.
  (autotrafo.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1059.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1059.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1746.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1746.
 
 Package rerunfilecheck Info: File `autotrafo.out' has not changed.
 (rerunfilecheck)             Checksum: 58E8E56FA0179CEEEBD0BB2D145C0054;435.
@@ -2044,10 +2100,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 43776 strings out of 493312
- 954407 string characters out of 3138889
- 1203082 words of memory out of 3000000
- 46529 multiletter control sequences out of 15000+200000
+ 44904 strings out of 493312
+ 982030 string characters out of 3138889
+ 1247088 words of memory out of 3000000
+ 47629 multiletter control sequences out of 15000+200000
  560157 words of font info for 116 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  53i,15n,92p,10403b,1379s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2069,16 +2125,17 @@ nicius\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecss1095.pk>
 \ecss1440.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on autotrafo.pdf (20 pages, 1035198 bytes).
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on autotrafo.pdf (34 pages, 1173852 bytes).
 PDF statistics:
- 1055 PDF objects out of 1200 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
+ 1440 PDF objects out of 1440 (max. 8388607)
+ 79 named destinations out of 1000 (max. 500000)
  163 words of extra memory for PDF output out of 10000 (max. 10000000)
 
