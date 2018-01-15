@@ -7,50 +7,50 @@
 \headcommand {\sectionentry {1}{Recapitula\IeC {\c c}\IeC {\~a}o}{3}{Recapitula\IeC {\c c}\IeC {\~a}o}{0}}
 \headcommand {\beamer@subsectionpages {3}{2}}
 \headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Indu\IeC {\c c}\IeC {\~a}o m\IeC {\'u}tua}}
-\headcommand {\slideentry {1}{1}{1}{3/7}{Indu\IeC {\c c}\IeC {\~a}o m\IeC {\'u}tua}{0}}
-\headcommand {\beamer@framepages {3}{7}}
-\headcommand {\beamer@subsectionpages {3}{7}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{8}{Nota\IeC {\c c}\IeC {\~a}o do ponto}}
-\headcommand {\slideentry {1}{2}{1}{8/8}{Nota\IeC {\c c}\IeC {\~a}o do ponto}{0}}
-\headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {1}{2}{2}{9/10}{Nota\IeC {\c c}\IeC {\~a}o do ponto}{0}}
-\headcommand {\beamer@framepages {9}{10}}
-\headcommand {\beamer@subsectionpages {8}{10}}
-\headcommand {\beamer@subsectionentry {0}{1}{3}{11}{Transformador Real}}
-\headcommand {\slideentry {1}{3}{1}{11/11}{Transformador Real}{0}}
+\headcommand {\slideentry {1}{1}{1}{3/5}{Indu\IeC {\c c}\IeC {\~a}o m\IeC {\'u}tua}{0}}
+\headcommand {\beamer@framepages {3}{5}}
+\headcommand {\beamer@subsectionpages {3}{5}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{6}{Nota\IeC {\c c}\IeC {\~a}o do ponto}}
+\headcommand {\slideentry {1}{2}{1}{6/6}{Nota\IeC {\c c}\IeC {\~a}o do ponto}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\slideentry {1}{2}{2}{7/8}{Nota\IeC {\c c}\IeC {\~a}o do ponto}{0}}
+\headcommand {\beamer@framepages {7}{8}}
+\headcommand {\beamer@subsectionpages {6}{8}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{9}{Transformador Real}}
+\headcommand {\slideentry {1}{3}{1}{9/9}{Transformador Real}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {1}{3}{2}{10/10}{Transformador Real}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\beamer@subsectionpages {9}{10}}
+\headcommand {\beamer@subsectionentry {0}{1}{4}{11}{Transformador Ideal}}
+\headcommand {\slideentry {1}{4}{1}{11/11}{Transformador Ideal}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\slideentry {1}{3}{2}{12/12}{Transformador Real}{0}}
+\headcommand {\slideentry {1}{4}{2}{12/12}{Transformador Ideal}{0}}
 \headcommand {\beamer@framepages {12}{12}}
+\headcommand {\beamer@sectionpages {3}{12}}
 \headcommand {\beamer@subsectionpages {11}{12}}
-\headcommand {\beamer@subsectionentry {0}{1}{4}{13}{Transformador Ideal}}
-\headcommand {\slideentry {1}{4}{1}{13/13}{Transformador Ideal}{0}}
+\headcommand {\sectionentry {2}{Autotransformador}{13}{Autotransformador}{0}}
+\headcommand {\slideentry {2}{0}{1}{13/13}{}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\slideentry {1}{4}{2}{14/14}{Transformador Ideal}{0}}
+\headcommand {\slideentry {2}{0}{2}{14/14}{}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@sectionpages {3}{14}}
-\headcommand {\beamer@subsectionpages {13}{14}}
-\headcommand {\sectionentry {2}{Autotransformador}{15}{Autotransformador}{0}}
-\headcommand {\slideentry {2}{0}{1}{15/15}{}{0}}
+\headcommand {\slideentry {2}{0}{3}{15/15}{}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {2}{0}{2}{16/16}{}{0}}
+\headcommand {\slideentry {2}{0}{4}{16/16}{}{0}}
 \headcommand {\beamer@framepages {16}{16}}
-\headcommand {\slideentry {2}{0}{3}{17/17}{}{0}}
-\headcommand {\beamer@framepages {17}{17}}
-\headcommand {\slideentry {2}{0}{4}{18/18}{}{0}}
-\headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {2}{0}{5}{19/41}{}{0}}
-\headcommand {\beamer@framepages {19}{41}}
-\headcommand {\beamer@sectionpages {15}{41}}
-\headcommand {\beamer@subsectionpages {15}{41}}
-\headcommand {\sectionentry {3}{Exerc\IeC {\'\i }cio}{42}{Exerc\IeC {\'\i }cio}{0}}
-\headcommand {\slideentry {3}{0}{1}{42/42}{}{0}}
-\headcommand {\beamer@framepages {42}{42}}
-\headcommand {\slideentry {3}{0}{2}{43/49}{}{0}}
-\headcommand {\beamer@framepages {43}{49}}
-\headcommand {\slideentry {3}{0}{3}{50/50}{}{0}}
-\headcommand {\beamer@framepages {50}{50}}
-\headcommand {\beamer@partpages {1}{50}}
-\headcommand {\beamer@subsectionpages {42}{50}}
-\headcommand {\beamer@sectionpages {42}{50}}
-\headcommand {\beamer@documentpages {50}}
+\headcommand {\slideentry {2}{0}{5}{17/39}{}{0}}
+\headcommand {\beamer@framepages {17}{39}}
+\headcommand {\beamer@sectionpages {13}{39}}
+\headcommand {\beamer@subsectionpages {13}{39}}
+\headcommand {\sectionentry {3}{Exerc\IeC {\'\i }cio}{40}{Exerc\IeC {\'\i }cio}{0}}
+\headcommand {\slideentry {3}{0}{1}{40/40}{}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\slideentry {3}{0}{2}{41/47}{}{0}}
+\headcommand {\beamer@framepages {41}{47}}
+\headcommand {\slideentry {3}{0}{3}{48/48}{}{0}}
+\headcommand {\beamer@framepages {48}{48}}
+\headcommand {\beamer@partpages {1}{48}}
+\headcommand {\beamer@subsectionpages {40}{48}}
+\headcommand {\beamer@sectionpages {40}{48}}
+\headcommand {\beamer@documentpages {48}}
 \headcommand {\def \inserttotalframenumber {17}}

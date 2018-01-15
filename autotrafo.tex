@@ -226,166 +226,166 @@
 			\begin{block}{Conceito}
 				\begin{itemize}
 					\item Os fluxos produzidos ($\phi_1$ e $\phi_2$) estão ambos no sentido anti-horário $\Rightarrow$ acoplamento mútuo tende a aumentar a aumentar a intensidade das tensões induzidas. 
-					\item Os fluxos magnéticos são completamente compreendidos definidos pelas correntes $i_1$ e $i_2$ variáveis no tempo.
+%					\item Os fluxos magnéticos são completamente compreendidos definidos pelas correntes $i_1$ e $i_2$ variáveis no tempo.
 				\end{itemize}
 			\end{block}
 		}
+%		\only<3>
+%		{
+%			\begin{center}
+%				\begin{circuitikz}[scale = \figScale, global scale/.style={scale=1.0}, rotate=-5, xslant=-0.1, thick, every node/.style={transform shape, scale=0.8}, decoration={markings, mark=at position 0.5 with {\arrow{latex}}}]
+%					\begin{scope}[even odd rule]
+%						\filldraw[rounded corners=2pt, fill=gray, rotate=-0, opacity=1.0] (\dx,
+%						\dy) rectangle ++(5,5) (\lx+\dx,\ly+\dy) rectangle ++(\a, \a);
+%						\fill [rounded corners=2pt, fill=gray] (\b, 0) --++ (0, \dy+\dr+0.02) --++(\dx, 0) --cycle;
+%						\fill [rounded corners=2pt, fill=gray] (0, \b) --++ (\dx+\dr+0.02, 0) --++(0, \dy)--cycle;
+%						\filldraw[rounded corners=2pt, fill=gray!50, rotate=-0] (0,0) rectangle
+%						++(\b, \b) (\lx,\ly) rectangle ++(\a, \a);
+%						\draw (\b-\dr,\dr) --++(\dx, \dy);
+%						\draw (\b-\dr,\b-\dr) --++(\dx, \dy);
+%						\draw (\dr,\b-\dr) --++(\dx, \dy);
+%						\draw [blue, thick, postaction={decorate}] (0, \ly) --++(-1.5,0);
+%						\foreach \z in {0,.24,.48,...,2.5}
+%						{
+%							\draw [rounded corners=2pt,blue, thick]
+%							(-0.0,\ly+\z+0.08)--(-0.09,\ly+\z) -- (\lx, \ly+\z)--++(0.89,0.5)
+%							--++(-0.08, 0.05);
+%						}
+%						\draw [rounded corners=2pt,blue, thick, postaction={decorate}] (-1.5,
+%						\ly+2.8) --++(1.5,0) node[black, above, pos=0.4] {\Huge $i_1$};
+%						
+%						
+%						\draw[-latex] (-\lx, \ly+0.2) --++ (0, 2.4) node[midway, left] {\Huge $v_1$};
+%						
+%						\draw [rounded corners=2pt,red, thick] (\a+\lx-2*\dr,
+%						\ly+2*\dr)--++(-\dr, -\dr)--++(\lx+\dx+2*\dr, 0);
+%						\draw [red, postaction={decorate}] (\b+\dx-\dr, \ly+\dr)--++(\a/2, 0);
+%						
+%						
+%						%				\draw [rounded corners=2pt, red, thick, postaction={decorate}]
+%						%				(\a+3*\lx-0.2, \ly+3.1) --++(\a/2, 0) node[black, midway, above] {\Huge $i_2$};
+%						
+%						
+%						\draw [rounded corners=2pt, red, thick, postaction={decorate}]
+%						(7.3, 4.1) --++ (-1.5, 0) node[black, midway, above] {\Huge $i_2$};
+%						
+%						
+%						
+%						
+%						\foreach \z in {.125,.25,.375,...,2.5}
+%						{
+%							\draw [rounded corners=2pt, red, thick] (\a+\lx,\ly+\z+0.1)--
+%							(\a+\lx-0.07,\ly+\z) -- (\a+2*\lx, \ly+\z)--++(0.87,0.5)--++(-0.06,
+%							0.06);
+%						}
+%						\draw[-latex] (2*\a+\lx, \ly+0.2) --++(0, 2.7) node[midway, right] {\Huge $v_2$};
+%						
+%						%end
+%						\draw (0.5, 0.5) node[] {\Huge $\circled{1}$};
+%						\draw (4.5, 0.5) node[] {\Huge $\circled{2}$};
+%						
+%						\draw [-latex, rounded corners=2pt, blue, thick]
+%						(1, 0.5) --++ (1, 0) node[black, right] {\Huge $\textcolor{blue}{\phi_1}$};
+%						
+%						\draw [-latex, rounded corners=2pt, red, thick]
+%						(4, 4.5) --++ (-1, 0) node[black, left] {\Huge $\textcolor{red}{\phi_2}$};
+%					\end{scope}
+%				\end{circuitikz}
+%			\end{center}	
+%			\begin{block}{Conceito}
+%				Portanto,
+%				\begin{equation}\label{key}
+%					\left\{ \begin{array}{l}
+%					\frac{{\partial {\phi _1}}}{{\partial {i_1}}}d{i_1} + \frac{{\partial {\phi _1}}}{{\partial {i_2}}}d{i_2} = d{\phi _1}\\[5pt]
+%					\frac{{\partial {\phi _2}}}{{\partial {i_1}}}d{i_1} + \frac{{\partial {\phi _2}}}{{\partial {i_2}}}d{i_2} = d{\phi _2}
+%					\end{array} \right.
+%				\end{equation}
+%				\begin{equation}\label{key}
+%				\left\{ \begin{array}{l}
+%				\left( {{N_1}\frac{{\partial {\phi _1}}}{{\partial {i_1}}}} \right)\frac{{d{i_1}}}{{dt}} + \left( {{N_1}\frac{{\partial {\phi _1}}}{{\partial {i_2}}}} \right)\frac{{d{i_2}}}{{dt}} = {N_1}\frac{{d{\phi _1}}}{{dt}}\\[5pt]
+%				\left( {{N_2}\frac{{\partial {\phi _2}}}{{\partial {i_1}}}} \right)\frac{{d{i_1}}}{{dt}} + \left( {{N_2}\frac{{\partial {\phi _2}}}{{\partial {i_2}}}} \right)\frac{{d{i_2}}}{{dt}} = {N_2}\frac{{d{\phi _2}}}{{dt}}
+%				\end{array} \right.
+%				\end{equation}
+%			\end{block}
+%		}
+%		\only<4>
+%		{
+%			\begin{center}
+%				\begin{circuitikz}[scale = \figScale, global scale/.style={scale=1.0}, rotate=-5, xslant=-0.1, thick, every node/.style={transform shape, scale=0.8}, decoration={markings, mark=at position 0.5 with {\arrow{latex}}}]
+%					\begin{scope}[even odd rule]
+%						\filldraw[rounded corners=2pt, fill=gray, rotate=-0, opacity=1.0] (\dx,
+%						\dy) rectangle ++(5,5) (\lx+\dx,\ly+\dy) rectangle ++(\a, \a);
+%						\fill [rounded corners=2pt, fill=gray] (\b, 0) --++ (0, \dy+\dr+0.02) --++(\dx, 0) --cycle;
+%						\fill [rounded corners=2pt, fill=gray] (0, \b) --++ (\dx+\dr+0.02, 0) --++(0, \dy)--cycle;
+%						\filldraw[rounded corners=2pt, fill=gray!50, rotate=-0] (0,0) rectangle
+%						++(\b, \b) (\lx,\ly) rectangle ++(\a, \a);
+%						\draw (\b-\dr,\dr) --++(\dx, \dy);
+%						\draw (\b-\dr,\b-\dr) --++(\dx, \dy);
+%						\draw (\dr,\b-\dr) --++(\dx, \dy);
+%						\draw [blue, thick, postaction={decorate}] (0, \ly) --++(-1.5,0);
+%						\foreach \z in {0,.24,.48,...,2.5}
+%						{
+%							\draw [rounded corners=2pt,blue, thick]
+%							(-0.0,\ly+\z+0.08)--(-0.09,\ly+\z) -- (\lx, \ly+\z)--++(0.89,0.5)
+%							--++(-0.08, 0.05);
+%						}
+%						\draw [rounded corners=2pt,blue, thick, postaction={decorate}] (-1.5,
+%						\ly+2.8) --++(1.5,0) node[black, above, pos=0.4] {\Huge $i_1$};
+%						
+%						
+%						\draw[-latex] (-\lx, \ly+0.2) --++ (0, 2.4) node[midway, left] {\Huge $v_1$};
+%						
+%						\draw [rounded corners=2pt,red, thick] (\a+\lx-2*\dr,
+%						\ly+2*\dr)--++(-\dr, -\dr)--++(\lx+\dx+2*\dr, 0);
+%						\draw [red, postaction={decorate}] (\b+\dx-\dr, \ly+\dr)--++(\a/2, 0);
+%						
+%						
+%						%				\draw [rounded corners=2pt, red, thick, postaction={decorate}]
+%						%				(\a+3*\lx-0.2, \ly+3.1) --++(\a/2, 0) node[black, midway, above] {\Huge $i_2$};
+%						
+%						
+%						\draw [rounded corners=2pt, red, thick, postaction={decorate}]
+%						(7.3, 4.1) --++ (-1.5, 0) node[black, midway, above] {\Huge $i_2$};
+%						
+%						
+%						
+%						
+%						\foreach \z in {.125,.25,.375,...,2.5}
+%						{
+%							\draw [rounded corners=2pt, red, thick] (\a+\lx,\ly+\z+0.1)--
+%							(\a+\lx-0.07,\ly+\z) -- (\a+2*\lx, \ly+\z)--++(0.87,0.5)--++(-0.06,
+%							0.06);
+%						}
+%						\draw[-latex] (2*\a+\lx, \ly+0.2) --++(0, 2.7) node[midway, right] {\Huge $v_2$};
+%						
+%						%end
+%						\draw (0.5, 0.5) node[] {\Huge $\circled{1}$};
+%						\draw (4.5, 0.5) node[] {\Huge $\circled{2}$};
+%						
+%						\draw [-latex, rounded corners=2pt, blue, thick]
+%						(1, 0.5) --++ (1, 0) node[black, right] {\Huge $\textcolor{blue}{\phi_1}$};
+%						
+%						\draw [-latex, rounded corners=2pt, red, thick]
+%						(4, 4.5) --++ (-1, 0) node[black, left] {\Huge $\textcolor{red}{\phi_2}$};
+%					\end{scope}
+%				\end{circuitikz}
+%			\end{center}	
+%			\begin{block}{Conceito}	
+%				\begin{equation}\label{key} \tag{2}
+%				\left\{ \begin{array}{l}
+%				\left( {{N_1}\frac{{\partial {\phi _1}}}{{\partial {i_1}}}} \right)\frac{{d{i_1}}}{{dt}} + \left( {{N_1}\frac{{\partial {\phi _1}}}{{\partial {i_2}}}} \right)\frac{{d{i_2}}}{{dt}} = {N_1}\frac{{d{\phi _1}}}{{dt}}\\[5pt]
+%				\left( {{N_2}\frac{{\partial {\phi _2}}}{{\partial {i_1}}}} \right)\frac{{d{i_1}}}{{dt}} + \left( {{N_2}\frac{{\partial {\phi _2}}}{{\partial {i_2}}}} \right)\frac{{d{i_2}}}{{dt}} = {N_2}\frac{{d{\phi _2}}}{{dt}}
+%				\end{array} \right.
+%				\end{equation}
+%				\begin{equation}\label{key} \tag{3}
+%				\left\{ \begin{array}{l}
+%				{L_1}\frac{{d{i_1}}}{{dt}} + M\frac{{d{i_2}}}{{dt}} = {v_1}\\[5pt]
+%				M\frac{{d{i_1}}}{{dt}} + {L_2}\frac{{d{i_2}}}{{dt}} = {v_2}
+%				\end{array} \right.
+%				\end{equation}
+%			\end{block}
+%		}
 		\only<3>
-		{
-			\begin{center}
-				\begin{circuitikz}[scale = \figScale, global scale/.style={scale=1.0}, rotate=-5, xslant=-0.1, thick, every node/.style={transform shape, scale=0.8}, decoration={markings, mark=at position 0.5 with {\arrow{latex}}}]
-					\begin{scope}[even odd rule]
-						\filldraw[rounded corners=2pt, fill=gray, rotate=-0, opacity=1.0] (\dx,
-						\dy) rectangle ++(5,5) (\lx+\dx,\ly+\dy) rectangle ++(\a, \a);
-						\fill [rounded corners=2pt, fill=gray] (\b, 0) --++ (0, \dy+\dr+0.02) --++(\dx, 0) --cycle;
-						\fill [rounded corners=2pt, fill=gray] (0, \b) --++ (\dx+\dr+0.02, 0) --++(0, \dy)--cycle;
-						\filldraw[rounded corners=2pt, fill=gray!50, rotate=-0] (0,0) rectangle
-						++(\b, \b) (\lx,\ly) rectangle ++(\a, \a);
-						\draw (\b-\dr,\dr) --++(\dx, \dy);
-						\draw (\b-\dr,\b-\dr) --++(\dx, \dy);
-						\draw (\dr,\b-\dr) --++(\dx, \dy);
-						\draw [blue, thick, postaction={decorate}] (0, \ly) --++(-1.5,0);
-						\foreach \z in {0,.24,.48,...,2.5}
-						{
-							\draw [rounded corners=2pt,blue, thick]
-							(-0.0,\ly+\z+0.08)--(-0.09,\ly+\z) -- (\lx, \ly+\z)--++(0.89,0.5)
-							--++(-0.08, 0.05);
-						}
-						\draw [rounded corners=2pt,blue, thick, postaction={decorate}] (-1.5,
-						\ly+2.8) --++(1.5,0) node[black, above, pos=0.4] {\Huge $i_1$};
-						
-						
-						\draw[-latex] (-\lx, \ly+0.2) --++ (0, 2.4) node[midway, left] {\Huge $v_1$};
-						
-						\draw [rounded corners=2pt,red, thick] (\a+\lx-2*\dr,
-						\ly+2*\dr)--++(-\dr, -\dr)--++(\lx+\dx+2*\dr, 0);
-						\draw [red, postaction={decorate}] (\b+\dx-\dr, \ly+\dr)--++(\a/2, 0);
-						
-						
-						%				\draw [rounded corners=2pt, red, thick, postaction={decorate}]
-						%				(\a+3*\lx-0.2, \ly+3.1) --++(\a/2, 0) node[black, midway, above] {\Huge $i_2$};
-						
-						
-						\draw [rounded corners=2pt, red, thick, postaction={decorate}]
-						(7.3, 4.1) --++ (-1.5, 0) node[black, midway, above] {\Huge $i_2$};
-						
-						
-						
-						
-						\foreach \z in {.125,.25,.375,...,2.5}
-						{
-							\draw [rounded corners=2pt, red, thick] (\a+\lx,\ly+\z+0.1)--
-							(\a+\lx-0.07,\ly+\z) -- (\a+2*\lx, \ly+\z)--++(0.87,0.5)--++(-0.06,
-							0.06);
-						}
-						\draw[-latex] (2*\a+\lx, \ly+0.2) --++(0, 2.7) node[midway, right] {\Huge $v_2$};
-						
-						%end
-						\draw (0.5, 0.5) node[] {\Huge $\circled{1}$};
-						\draw (4.5, 0.5) node[] {\Huge $\circled{2}$};
-						
-						\draw [-latex, rounded corners=2pt, blue, thick]
-						(1, 0.5) --++ (1, 0) node[black, right] {\Huge $\textcolor{blue}{\phi_1}$};
-						
-						\draw [-latex, rounded corners=2pt, red, thick]
-						(4, 4.5) --++ (-1, 0) node[black, left] {\Huge $\textcolor{red}{\phi_2}$};
-					\end{scope}
-				\end{circuitikz}
-			\end{center}	
-			\begin{block}{Conceito}
-				Portanto,
-				\begin{equation}\label{key}
-					\left\{ \begin{array}{l}
-					\frac{{\partial {\phi _1}}}{{\partial {i_1}}}d{i_1} + \frac{{\partial {\phi _1}}}{{\partial {i_2}}}d{i_2} = d{\phi _1}\\[5pt]
-					\frac{{\partial {\phi _2}}}{{\partial {i_1}}}d{i_1} + \frac{{\partial {\phi _2}}}{{\partial {i_2}}}d{i_2} = d{\phi _2}
-					\end{array} \right.
-				\end{equation}
-				\begin{equation}\label{key}
-				\left\{ \begin{array}{l}
-				\left( {{N_1}\frac{{\partial {\phi _1}}}{{\partial {i_1}}}} \right)\frac{{d{i_1}}}{{dt}} + \left( {{N_1}\frac{{\partial {\phi _1}}}{{\partial {i_2}}}} \right)\frac{{d{i_2}}}{{dt}} = {N_1}\frac{{d{\phi _1}}}{{dt}}\\[5pt]
-				\left( {{N_2}\frac{{\partial {\phi _2}}}{{\partial {i_1}}}} \right)\frac{{d{i_1}}}{{dt}} + \left( {{N_2}\frac{{\partial {\phi _2}}}{{\partial {i_2}}}} \right)\frac{{d{i_2}}}{{dt}} = {N_2}\frac{{d{\phi _2}}}{{dt}}
-				\end{array} \right.
-				\end{equation}
-			\end{block}
-		}
-		\only<4>
-		{
-			\begin{center}
-				\begin{circuitikz}[scale = \figScale, global scale/.style={scale=1.0}, rotate=-5, xslant=-0.1, thick, every node/.style={transform shape, scale=0.8}, decoration={markings, mark=at position 0.5 with {\arrow{latex}}}]
-					\begin{scope}[even odd rule]
-						\filldraw[rounded corners=2pt, fill=gray, rotate=-0, opacity=1.0] (\dx,
-						\dy) rectangle ++(5,5) (\lx+\dx,\ly+\dy) rectangle ++(\a, \a);
-						\fill [rounded corners=2pt, fill=gray] (\b, 0) --++ (0, \dy+\dr+0.02) --++(\dx, 0) --cycle;
-						\fill [rounded corners=2pt, fill=gray] (0, \b) --++ (\dx+\dr+0.02, 0) --++(0, \dy)--cycle;
-						\filldraw[rounded corners=2pt, fill=gray!50, rotate=-0] (0,0) rectangle
-						++(\b, \b) (\lx,\ly) rectangle ++(\a, \a);
-						\draw (\b-\dr,\dr) --++(\dx, \dy);
-						\draw (\b-\dr,\b-\dr) --++(\dx, \dy);
-						\draw (\dr,\b-\dr) --++(\dx, \dy);
-						\draw [blue, thick, postaction={decorate}] (0, \ly) --++(-1.5,0);
-						\foreach \z in {0,.24,.48,...,2.5}
-						{
-							\draw [rounded corners=2pt,blue, thick]
-							(-0.0,\ly+\z+0.08)--(-0.09,\ly+\z) -- (\lx, \ly+\z)--++(0.89,0.5)
-							--++(-0.08, 0.05);
-						}
-						\draw [rounded corners=2pt,blue, thick, postaction={decorate}] (-1.5,
-						\ly+2.8) --++(1.5,0) node[black, above, pos=0.4] {\Huge $i_1$};
-						
-						
-						\draw[-latex] (-\lx, \ly+0.2) --++ (0, 2.4) node[midway, left] {\Huge $v_1$};
-						
-						\draw [rounded corners=2pt,red, thick] (\a+\lx-2*\dr,
-						\ly+2*\dr)--++(-\dr, -\dr)--++(\lx+\dx+2*\dr, 0);
-						\draw [red, postaction={decorate}] (\b+\dx-\dr, \ly+\dr)--++(\a/2, 0);
-						
-						
-						%				\draw [rounded corners=2pt, red, thick, postaction={decorate}]
-						%				(\a+3*\lx-0.2, \ly+3.1) --++(\a/2, 0) node[black, midway, above] {\Huge $i_2$};
-						
-						
-						\draw [rounded corners=2pt, red, thick, postaction={decorate}]
-						(7.3, 4.1) --++ (-1.5, 0) node[black, midway, above] {\Huge $i_2$};
-						
-						
-						
-						
-						\foreach \z in {.125,.25,.375,...,2.5}
-						{
-							\draw [rounded corners=2pt, red, thick] (\a+\lx,\ly+\z+0.1)--
-							(\a+\lx-0.07,\ly+\z) -- (\a+2*\lx, \ly+\z)--++(0.87,0.5)--++(-0.06,
-							0.06);
-						}
-						\draw[-latex] (2*\a+\lx, \ly+0.2) --++(0, 2.7) node[midway, right] {\Huge $v_2$};
-						
-						%end
-						\draw (0.5, 0.5) node[] {\Huge $\circled{1}$};
-						\draw (4.5, 0.5) node[] {\Huge $\circled{2}$};
-						
-						\draw [-latex, rounded corners=2pt, blue, thick]
-						(1, 0.5) --++ (1, 0) node[black, right] {\Huge $\textcolor{blue}{\phi_1}$};
-						
-						\draw [-latex, rounded corners=2pt, red, thick]
-						(4, 4.5) --++ (-1, 0) node[black, left] {\Huge $\textcolor{red}{\phi_2}$};
-					\end{scope}
-				\end{circuitikz}
-			\end{center}	
-			\begin{block}{Conceito}	
-				\begin{equation}\label{key} \tag{2}
-				\left\{ \begin{array}{l}
-				\left( {{N_1}\frac{{\partial {\phi _1}}}{{\partial {i_1}}}} \right)\frac{{d{i_1}}}{{dt}} + \left( {{N_1}\frac{{\partial {\phi _1}}}{{\partial {i_2}}}} \right)\frac{{d{i_2}}}{{dt}} = {N_1}\frac{{d{\phi _1}}}{{dt}}\\[5pt]
-				\left( {{N_2}\frac{{\partial {\phi _2}}}{{\partial {i_1}}}} \right)\frac{{d{i_1}}}{{dt}} + \left( {{N_2}\frac{{\partial {\phi _2}}}{{\partial {i_2}}}} \right)\frac{{d{i_2}}}{{dt}} = {N_2}\frac{{d{\phi _2}}}{{dt}}
-				\end{array} \right.
-				\end{equation}
-				\begin{equation}\label{key} \tag{3}
-				\left\{ \begin{array}{l}
-				{L_1}\frac{{d{i_1}}}{{dt}} + M\frac{{d{i_2}}}{{dt}} = {v_1}\\[5pt]
-				M\frac{{d{i_1}}}{{dt}} + {L_2}\frac{{d{i_2}}}{{dt}} = {v_2}
-				\end{array} \right.
-				\end{equation}
-			\end{block}
-		}
-		\only<5>
 		{
 			\begin{center}
 				\begin{circuitikz}[scale = \figScale, global scale/.style={scale=1.0}, rotate=-5, xslant=-0.1, thick, every node/.style={transform shape, scale=0.8}, decoration={markings, mark=at position 0.5 with {\arrow{latex}}}]
@@ -800,6 +800,7 @@
 			\begin{block}{Transformador real}
 				\begin{itemize}
 					\item Coeficiente de acoplamento do transformador real não é unitário.
+					\item $M=k\sqrt{L_1 L_2}$.
 					\item Indutâncias próprias das bobinas são valores finitos.
 				\end{itemize}
 			\end{block}
